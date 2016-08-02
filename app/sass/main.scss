@@ -6,8 +6,13 @@ $font-size: 16px;
 
 @import "_fonts";
 
+::selection {
+  background: rgba($black, .5);
+  color: $white;
+}
+
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   text-transform: uppercase;
 }
 
@@ -45,9 +50,9 @@ h1 {
     .header-sigara {
       position: absolute;
       bottom: 0;
-      right: -120px;
-      width: 820px;
-      height: 820px;
+      right: -480px;
+      width: 1246px;
+      height: 678px;
       background: url("../img/sigara-grey.png") no-repeat;
     }
     .header-sigara-gauss {
@@ -61,7 +66,7 @@ h1 {
   }
   .bounce {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 50%;
     margin-left: -100px;
     width: 200px;
@@ -69,7 +74,7 @@ h1 {
     border: 1px solid $grey;
     z-index: 11;
     color: $grey;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: 100;
     font-size: $font-size + 4px;
     display: flex;
