@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url(../fonts/MuseoSansCyrl_100.otf);
+  font-weight: 100; }
+
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url(../fonts/MuseoSansCyrl_300.otf);
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url(../fonts/MuseoSansCyrl_500.otf);
+  font-weight: 500; }
+
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url(../fonts/MuseoSansCyrl_700.otf);
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url(../fonts/MuseoSansCyrl_900.otf);
+  font-weight: 900; }
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url(../fonts/PT_Sans-Web-Bold.ttf);
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url(../fonts/PT_Sans-Web-Regular.ttf);
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../fonts/RobotoCondensed-Light.ttf);
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url(../fonts/RobotoCondensed-Regular.ttf);
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url(../fonts/RobotoCondensed-Bold.ttf);
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'Russo One';
+  src: url(../fonts/Russo-One.ttf);
+  font-weight: 700; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Sans';
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 80px; }
+
+.section-1 {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: #000; }
+  .section-1 h1 {
+    color: #fff;
+    text-align: center; }
+    .section-1 h1 small {
+      font-size: 32px;
+      letter-spacing: 10px;
+      color: #989898; }
+  .section-1 .header-wrapper {
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -120px;
+    right: 0;
+    z-index: 11;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2NkQAL///83ZoTxwRxGxrNgARgHxGZE5oAEAOz3DzVasxQ9AAAAAElFTkSuQmCC) repeat, -webkit-radial-gradient(rgba(255, 255, 255, 0.3), #000);
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2NkQAL///83ZoTxwRxGxrNgARgHxGZE5oAEAOz3DzVasxQ9AAAAAElFTkSuQmCC) repeat, radial-gradient(rgba(255, 255, 255, 0.3), #000); }
+    .section-1 .header-wrapper .header-sigara {
+      position: absolute;
+      bottom: 0;
+      right: -120px;
+      width: 820px;
+      height: 820px;
+      background: url("../img/sigara-grey.png") no-repeat; }
+    .section-1 .header-wrapper .header-sigara-gauss {
+      position: absolute;
+      left: 0;
+      bottom: 120px;
+      width: 100%;
+      height: 100%;
+      background: url("../img/sigara2.png") no-repeat; }
+  .section-1 .bounce {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid #989898;
+    z-index: 11;
+    color: #989898;
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: .2s;
+    transition: .2s; }
+    .section-1 .bounce:hover {
+      border-color: #fff;
+      color: #fff;
+      cursor: pointer; }

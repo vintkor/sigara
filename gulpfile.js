@@ -41,6 +41,7 @@ gulp.task('scripts', function() {
         'app/libs/jquery.maskedinput/dist/jquery.maskedinput.js',
         'app/libs/wow.js',
         'app/libs/sweetalert/dist/sweetalert.min.js',
+        'app/libs/backgroundVideo.js',
         'app/libs/owl.carousel/owl.carousel.js'
         ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
