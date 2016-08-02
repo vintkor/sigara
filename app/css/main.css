@@ -76,11 +76,17 @@ h1 {
   background: #000; }
   .section-1 h1 {
     color: #fff;
-    text-align: center; }
+    text-align: center;
+    letter-spacing: .15em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #e0dfdc;
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 22px 30px rgba(0, 0, 0, 0.8); }
     .section-1 h1 small {
       font-size: 32px;
       letter-spacing: 10px;
-      color: #989898; }
+      color: #989898;
+      text-shadow: none; }
   .section-1 .header-wrapper {
     text-align: center;
     display: -webkit-box;
