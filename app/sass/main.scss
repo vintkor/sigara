@@ -7,8 +7,9 @@ $font-size: 16px;
 @import "_fonts";
 
 ::selection {
-  background: rgba($black, .5);
-  color: $white;
+  background: rgba($black, .2);
+  color: $black;
+  text-shadow: 1px 1px 1px $white;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -16,8 +17,17 @@ h1,h2,h3,h4,h5,h6 {
   text-transform: uppercase;
 }
 
-h1 {
-  font-size: $font-size * 5;
+p,li,a,div,span {
+  font-size: $font-size;
+  font-weight: 300;
+  font-family: 'Museo Sans Cyrl', sans-serif;
+}
+
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
 }
 
 .section-1 {
@@ -27,12 +37,12 @@ h1 {
   width: 100%;
   background: #000;
   h1 {
-    color: $white;
+    font-size: $font-size * 5;
     text-align: center;
     letter-spacing: .15em;
-    text-align: center;
     text-transform: uppercase;
     color: #e0dfdc;
+    line-height: .7em;
     text-shadow:
             0 -1px 0 #fff,
             0 1px 0 #2e2e2e,
@@ -48,6 +58,7 @@ h1 {
       letter-spacing: 10px;
       color: $grey;
       text-shadow: none;
+      line-height: 3.7em;
     }
   }
   .header-wrapper {
@@ -60,15 +71,31 @@ h1 {
     bottom: -120px;
     right: 0;
     z-index: 11;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2NkQAL///83ZoTxwRxGxrNgARgHxGZE5oAEAOz3DzVasxQ9AAAAAElFTkSuQmCC) repeat,
-    radial-gradient(rgba(255,255,255,.3), $black);
+    background: url("data:image/png;base64,
+                    iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2NkQAL///
+                    83ZoTxwRxGxrNgARgHxGZE5oAEAOz3DzVasxQ9AAAAAElFTkSuQmCC") repeat,
+                    radial-gradient(rgba(255,255,255,.3), $black);
+    a {
+      color: $grey;
+      text-transform: uppercase;
+      border: 1px solid $grey;
+      padding: 10px 30px;
+      transition: .2s;
+      &:hover {
+        border-color: $white;
+        color: $white;
+      }
+    }
     .header-sigara {
       position: absolute;
-      bottom: 0;
+      bottom: -40px;
       right: -480px;
       width: 1246px;
       height: 678px;
-      background: url("../img/sigara-grey.png") no-repeat;
+      img {
+        width: 70%;
+        height: auto;
+      }
     }
     .header-sigara-gauss {
       position: absolute;
@@ -79,7 +106,7 @@ h1 {
       background: url("../img/sigara2.png") no-repeat;
     }
   }
-  .bounce {
+  .more {
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -101,5 +128,197 @@ h1 {
       color: $white;
       cursor: pointer;
     }
+  }
+  .top-left,
+  .top-right,
+  .bottom-left,
+  .bottom-right {
+    position: absolute;
+    z-index: 11;
+    //border-radius: 50%;
+    background: rgba($grey, .3);
+    border: 1px solid rgba($white, .15);
+    box-shadow: 0 0 15px rgba($black, .5);
+    width: 250px;
+    height: 100px;
+    display: flex;
+    color: rgba($white, .7);
+    justify-content: center;
+    padding: 30px;
+    transition: .2s;
+    border-radius: 3px;
+    &:hover {
+      background: $white;
+      color: $black;
+      cursor: pointer;
+    }
+  }
+  .top-left {
+    top: -20px;
+    left: -20px;
+    transform: skewX(-20deg);
+    padding-top: 45px;
+    span {
+      transform: skewX(20deg);
+    }
+  }
+  .top-right {
+    top: -20px;
+    right: -20px;
+    transform: skewX(20deg);
+    padding-top: 45px;
+    span {
+      transform: skewX(-20deg);
+    }
+  }
+  .bottom-left {
+    bottom: -20px;
+    left: -20px;
+    transform: skewX(20deg);
+    span {
+      transform: skewX(-20deg);
+    }
+  }
+  .bottom-right {
+    bottom: -20px;
+    right: -20px;
+    transform: skewX(-20deg);
+    span {
+      transform: skewX(20deg);
+    }
+  }
+  .top-left-to-top-right,
+  .top-right-to-bottom-right,
+  .bottom-right-to-bottom-left {
+    position: absolute;
+    z-index: 11;
+    width: 5%;
+    height: 0;
+    border: 2px solid $grey;
+  }
+  .top-left-to-top-right {
+    top: 40px;
+    margin-left: 15%;
+    animation: top-left-to-top-right 3s ease-in-out infinite;
+    &:after {
+      position: absolute;
+      top: -8px;
+      right: -16px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 0 8px 16px;
+      border-color: transparent transparent transparent $grey;
+      content: '';
+    }
+  }
+  .top-right-to-bottom-right {
+    top: 20%;
+    right: 100px;
+    margin-left: 0;
+    width: 0;
+    height: 10%;
+    animation: top-right-to-bottom-right 3s ease-in-out infinite;
+    &:after {
+      position: absolute;
+      bottom: -16px;
+      right: -8px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 16px 8px 0 8px;
+      border-color: $grey transparent transparent transparent;
+      content: '';
+    }
+  }
+  .bottom-right-to-bottom-left {
+    bottom: 40px;
+    margin-left: 15%;
+    animation: bottom-right-to-bottom-left 3s ease-in-out infinite;
+    &:after {
+      position: absolute;
+      top: -8px;
+      left: -16px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 16px 8px 0;
+      border-color: transparent $grey transparent transparent;
+      content: '';
+    }
+  }
+}
+
+.modal1 {
+  background: rgba($white, .92) !important;
+  text-align: center;
+  padding: 0 5%;
+  svg {
+    margin: 30px auto;
+    width: 70px;
+    height: 70px;
+    transition: .4s;
+    &:hover {
+      transform: rotate(360deg);
+      cursor: pointer;
+    }
+  }
+}
+
+.modal-content {
+  box-shadow: none;
+  background: none;
+  border: none;
+}
+
+
+@keyframes top-left-to-top-right {
+  from {
+    margin-left: 15%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    margin-left: 75%;
+    opacity: 0;
+  }
+}
+
+@keyframes top-right-to-bottom-right {
+  from {
+    top: 20%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    top: 65%;
+    opacity: 0;
+  }
+}
+
+@keyframes bottom-right-to-bottom-left {
+  from {
+    margin-left: 75%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    margin-left: 15%;
+    opacity: 0;
   }
 }
