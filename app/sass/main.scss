@@ -71,9 +71,7 @@ a:focus {
     bottom: -120px;
     right: 0;
     z-index: 11;
-    background: url("data:image/png;base64,
-                    iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2NkQAL///
-                    83ZoTxwRxGxrNgARgHxGZE5oAEAOz3DzVasxQ9AAAAAElFTkSuQmCC") repeat,
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAKElEQVQIW2NkQAMnGE4YMyKLgQQsGCzOwgVhAiBFYEFkAbAgugBIEACU0Q3JqjoTvQAAAABJRU5ErkJggg==") repeat,
                     radial-gradient(rgba(255,255,255,.3), $black);
     a {
       color: $grey;
@@ -88,13 +86,14 @@ a:focus {
     }
     .header-sigara {
       position: absolute;
-      bottom: -40px;
-      right: -480px;
+      bottom: 180px;
+      right: -460px;
       width: 1246px;
       height: 678px;
       img {
-        width: 70%;
+        width: 80%;
         height: auto;
+        transform: rotate(-60deg);
       }
     }
     .header-sigara-gauss {
